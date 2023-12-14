@@ -16,36 +16,63 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.report.sourceEncoding>UTF-8</project.report.sourceEncoding>
 		<maven.compiler.release>17</maven.compiler.release>
-		<jakartaee-api.version>10.0.0</jakartaee-api.version>
-		<compiler-plugin.version>3.11.0</compiler-plugin.version>
-		<war-plugin.version>3.3.2</war-plugin.version>
+<!--		<jakartaee-api.version>10.0.0</jakartaee-api.version>-->
+<!--		<compiler-plugin.version>3.11.0</compiler-plugin.version>-->
+<!--		<war-plugin.version>3.3.2</war-plugin.version>-->
 	</properties>
 
 	<dependencies>
+<!--		<dependency>-->
+<!--			<groupId>jakarta.platform</groupId>-->
+<!--			<artifactId>jakarta.jakartaee-web-api</artifactId>-->
+<!--			<version>${jakartaee-api.version}</version>-->
+<!--			<scope>provided</scope>-->
+<!--		</dependency>-->
 		<dependency>
-			<groupId>jakarta.platform</groupId>
-			<artifactId>jakarta.jakartaee-web-api</artifactId>
-			<version>${jakartaee-api.version}</version>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.0.0</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>jakarta.servlet.jsp</groupId>
+			<artifactId>jakarta.servlet.jsp-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Jakarta JSTL for JSP -->
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
 	</dependencies>
 
-	<build>
-		<finalName>jakartaee-hello-world</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${compiler-plugin.version}</version>
-			</plugin>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>${war-plugin.version}</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
-			</plugin>
+<!--	<build>-->
+<!--		<finalName>jakartaee-hello-world</finalName>-->
+<!--		<plugins>-->
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-compiler-plugin</artifactId>-->
+<!--				<version>${compiler-plugin.version}</version>-->
+<!--			</plugin>-->
+<!--			<plugin>-->
+<!--				<artifactId>maven-war-plugin</artifactId>-->
+<!--				<version>${war-plugin.version}</version>-->
+<!--				<configuration>-->
+<!--					<failOnMissingWebXml>false</failOnMissingWebXml>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
 
-		</plugins>
-	</build>
+<!--		</plugins>-->
+<!--	</build>-->
 </project>
