@@ -1,3 +1,2 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-
-<c:redirect url="/hello"/>
+<c:redirect url="/trang-chu"/>
